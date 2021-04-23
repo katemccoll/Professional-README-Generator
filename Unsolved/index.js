@@ -86,43 +86,43 @@ const questions = () => {
 
 const generateREADME = (answers) =>
     `
-    #${answers.title}
+#${answers.title}
     
-    ## Description
-    ${answers.description}
-    
-    ### Live Link
-    ${answers.liveLink}    
-    
-    badges
-    
-    ## Table of Contents
-    1. []()
-    2. []()
-    3. []()
-    4. []()
-    5. []()
-    6. []()
-    7. []()
-    8. []()
-    
-    ## Installation instructions
-    ${answers.install}
-    
-    ## Usage Information
-    ${answers.usage}
-    
-    ## Test Instructions
-    ${answers.tests}
-    
-    ## License
-    ${answers.license}
-    
-    ## Contribution Guidelines
-    ${answers.contributing}
-    
-    ## Questions
-    ${answers.emailQuestions}`;
+## Description
+${answers.description}
+
+### Live Link
+${answers.liveLink}    
+
+badges
+
+## Table of Contents
+1. []()
+2. []()
+3. []()
+4. []()
+5. []()
+6. []()
+7. []()
+8. []()
+
+## Installation instructions
+${answers.install}
+
+## Usage Information
+${answers.usage}
+
+## Test Instructions
+${answers.tests}
+
+## License
+${answers.license}
+
+## Contribution Guidelines
+${answers.contributing}
+
+## Questions
+${answers.emailQuestions}`;
 
 
 // TODO: Create a function to initialize app
