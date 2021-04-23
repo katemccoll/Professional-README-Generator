@@ -9,8 +9,8 @@ const questions = () => {
     return inquirer.prompt([
         {
             type: "input",
-            name: "license",
-            message: "WHat is your full name",
+            name: "name",
+            message: "What is your full name",
         },
         {
             type: "input",
@@ -19,13 +19,18 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "project-description",
+            name: "projectDescription",
             message: "What is your project about? (What can your project do?)",
         },
         {
             type: "input",
-            name: "live-link",
+            name: "liveLink",
             message: "Link to your project (use empty value to skip)",
+        },
+        {
+            type: "input",
+            name: "technologiesUsed",
+            message: "Which technologies did you use?",
         },
         {
             type: "input",
@@ -34,7 +39,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "installation",
+            name: "install",
             message: "Are there any installations or requirements for your project?",
         },
         {
@@ -44,12 +49,12 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "test",
-            message: "Include a test command",
+            name: "tests",
+            message: "Include any test commands",
         },
         {
             type: "input",
-            name: "questions",
+            name: "emailQuestions",
             message: "Enter your email address for people if they have questions or want help",
         },
         {
@@ -64,7 +69,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "author-or-acknowledgement",
+            name: "authorAcknowledgement",
             message: "Show appreciation for those who helped the project",
         },
         {
@@ -77,10 +82,60 @@ const questions = () => {
 
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// function writeToFile(fileName, data) {}
+
+function generateREADME(answers) {
+    `
+    #${answers.title}
+    
+    ## Description
+    ${answers.description}
+    
+    ### Live Link
+    ${answers.liveLink}    
+    
+    badges
+    
+    ## Table of Contents
+    1. []()
+    2. []()
+    3. []()
+    4. []()
+    5. []()
+    6. []()
+    7. []()
+    8. []()
+    
+    ## Installation instructions
+    ${answers.install}
+    
+    ## Usage Information
+    ${answers.usage}
+    
+    ## Test Instructions
+    ${answers.tests}
+    
+    ## License
+    ${answers.license}
+    
+    ## Contribution Guidelines
+    ${answers.contributing}
+    
+    ## Questions
+    ${answers.emailQuestions}
+    `
+}
+
 
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {}
+const init = () => {
+    const generateReadme = generateREADME(answers)
+    questions()
+        .then((answers) => writeFileAsync("README.md", generateReadme))
+        .then( () => console.log("You have successfully written your README"))
+        .catch((err) => console.error(err))
+}
 
 // Function call to initialize app
 init();
