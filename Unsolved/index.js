@@ -84,7 +84,7 @@ const questions = () => {
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
-function generateREADME(answers) {
+const generateREADME = (answers) =>
     `
     #${answers.title}
     
@@ -122,19 +122,16 @@ function generateREADME(answers) {
     ${answers.contributing}
     
     ## Questions
-    ${answers.emailQuestions}
-    `
-}
+    ${answers.emailQuestions}`;
 
 
 // TODO: Create a function to initialize app
 // function init() {}
 const init = () => {
-    const generateReadme = generateREADME(answers)
     questions()
-        .then((answers) => writeFileAsync("README.md", generateReadme))
+        .then((answers) => writeFileAsync("README.md", generateREADME(answers)))
         .then( () => console.log("You have successfully written your README"))
-        .catch((err) => console.error(err))
+        .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
