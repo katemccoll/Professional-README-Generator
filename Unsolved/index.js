@@ -54,7 +54,7 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "emailQuestions",
+            name: "email",
             message: "Enter your email address for people if they have questions or want help",
         },
         {
@@ -64,18 +64,14 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "contributing",
+            name: "contribution",
             message: "Say if you are open for contributions and what that would be",
-        },
-        {
-            type: "input",
-            name: "authorAcknowledgement",
-            message: "Show appreciation for those who helped the project",
         },
         {
             type: "checkbox",
             name: "license",
             choices: ["MIT", "GNU-v3.0", "Apache-v2.0", "Boost-v1.0"],
+            default: ["MIT"]
         },
     ]);
 }
@@ -104,19 +100,21 @@ ${softwareLicense[answers.license]}
 ## Description
 ${answers.projectDescription}
 
-### Live Link
+### Live Link: 
 ${answers.liveLink}    
 
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
 - [Test](#test)
-- [Credit]()
-- [License]()
+- [Contribution](#contribution)
+- [License](#license)
+- [Questions](#questions)
 
 
 ## Installation
 ${answers.install}
+
 
 ## Usage
 ${answers.usage}
@@ -126,13 +124,19 @@ ${answers.tests}
 
 
 ## License
-${answers.license}
 
-## Contribution Guidelines
-${answers.contributing}
+${answers.license} License
 
-## Questions
-${answers.emailQuestions}`;
+Copyright (c) ${new Date().getFullYear()} ${answers.name}
+
+## Contribution
+${answers.contribution}
+
+## Questions 
+If you have any questions, please contact me by \
+Email: ${answers.email} \
+GitHub: [${answers.github}](https://github.com/${answers.github})
+`;
 
 }
 // TODO: Create a function to initialize app
@@ -146,4 +150,5 @@ const init = () => {
 
 // Function call to initialize app
 init();
+
 
