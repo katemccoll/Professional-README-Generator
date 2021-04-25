@@ -10,7 +10,7 @@ const questions = () => {
         {
             type: "input",
             name: "name",
-            message: "What is your full name",
+            message: "What is your full name?",
         },
         {
             type: "input",
@@ -73,9 +73,9 @@ const questions = () => {
             message: "Show appreciation for those who helped the project",
         },
         {
-            type: "input",
+            type: "checkbox",
             name: "license",
-            message: "How is it licensed",
+            choices: ["MIT", "GNU-v3.0", "Apache-v2.0", "Boost-v1.0"],
         },
     ]);
 }
@@ -84,36 +84,46 @@ const questions = () => {
 // TODO: Create a function to write README file
 // function writeToFile(fileName, data) {}
 
-const generateREADME = (answers) =>
-    `
+const generateREADME = (answers) => {
+
+
+    const softwareLicense = {
+        "MIT": "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)",
+        "GNU-v3.0": "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)",
+        "Apache-v2.20": "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+        "Boost-v1.0": "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+    };
+
+
+    return `
 #${answers.title}
+
+${softwareLicense[answers.license]}
+
     
 ## Description
-${answers.description}
+${answers.projectDescription}
 
 ### Live Link
 ${answers.liveLink}    
 
-badges
-
 ## Table of Contents
-1. []()
-2. []()
-3. []()
-4. []()
-5. []()
-6. []()
-7. []()
-8. []()
+- [Installation](#installation)
+- [Usage](#usage)
+- [Test](#test)
+- [Credit]()
+- [License]()
 
-## Installation instructions
+
+## Installation
 ${answers.install}
 
-## Usage Information
+## Usage
 ${answers.usage}
 
-## Test Instructions
+## Tests
 ${answers.tests}
+
 
 ## License
 ${answers.license}
@@ -124,15 +134,16 @@ ${answers.contributing}
 ## Questions
 ${answers.emailQuestions}`;
 
-
+}
 // TODO: Create a function to initialize app
 // function init() {}
 const init = () => {
     questions()
         .then((answers) => writeFileAsync("README.md", generateREADME(answers)))
-        .then( () => console.log("You have successfully written your README"))
+        .then(() => console.log("You have successfully written your README"))
         .catch((err) => console.error(err));
 }
 
 // Function call to initialize app
 init();
+
