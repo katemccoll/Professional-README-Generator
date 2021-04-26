@@ -86,7 +86,7 @@ const generateREADME = (answers) => {
 
 
     return `
-#${answers.title}
+# ${answers.title}
 
 ${softwareLicense[answers.license]}
     

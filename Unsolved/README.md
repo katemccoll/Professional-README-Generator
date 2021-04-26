@@ -1,5 +1,5 @@
 
-#Demo
+# Demo
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
@@ -19,10 +19,10 @@ https://katemccoll.github.io/Portfolio/
 
 
 ## Installation
-insert requirements here
+Insert requirements here
 
 ## Usage
-insert usage commands here
+Insert usage commands here
 
 ## Results
 ![photo](./assets/images/mobile-1.JPG)
