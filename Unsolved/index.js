@@ -15,17 +15,16 @@ const questions = () => {
         {
             type: "input",
             name: "title",
-            message: "What is the title of your project? (Self-explaining name)",
+            message: "What is the title of your project?",
         },
         {
-            type: "input",
-            name: "projectDescription",
-            message: "What is your project about? (What can your project do?)",
+            name: "description",
+            message: "What is your project about?",
         },
         {
             type: "input",
             name: "liveLink",
-            message: "Link to your project (use empty value to skip)",
+            message: "Link to your project",
         },
         {
             type: "input",
@@ -34,13 +33,13 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "visuals",
-            message: "Are there any screenshots or videos/GIFs you would like to use? (use empty value to skip)",
+            name: "results",
+            message: "Do you want to include an image or a gif? (enter path)",
         },
         {
             type: "input",
             name: "install",
-            message: "Are there any installations or requirements for your project?",
+            message: "What are the requirements for your project?",
         },
         {
             type: "input",
@@ -49,23 +48,18 @@ const questions = () => {
         },
         {
             type: "input",
-            name: "tests",
-            message: "Include any test commands",
-        },
-        {
-            type: "input",
             name: "email",
-            message: "Enter your email address for people if they have questions or want help",
+            message: "Enter your email address",
         },
         {
             type: "input",
             name: "github",
-            message: "github url?",
+            message: "GitHub username",
         },
         {
             type: "input",
             name: "contribution",
-            message: "Say if you are open for contributions and what that would be",
+            message: "Message for budding contributors",
         },
         {
             type: "checkbox",
@@ -95,10 +89,9 @@ const generateREADME = (answers) => {
 #${answers.title}
 
 ${softwareLicense[answers.license]}
-
     
 ## Description
-${answers.projectDescription}
+${answers.description}
 
 ### Live Link: 
 ${answers.liveLink}    
@@ -106,7 +99,7 @@ ${answers.liveLink}
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Test](#test)
+- [Results](#results)
 - [Contribution](#contribution)
 - [License](#license)
 - [Questions](#questions)
@@ -115,16 +108,14 @@ ${answers.liveLink}
 ## Installation
 ${answers.install}
 
-
 ## Usage
 ${answers.usage}
 
-## Tests
-${answers.tests}
+## Results
+![photo](${answers.results})
 
 
 ## License
-
 ${answers.license} License
 
 Copyright (c) ${new Date().getFullYear()} ${answers.name}
