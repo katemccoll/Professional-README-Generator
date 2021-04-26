@@ -19,10 +19,10 @@ https://katemccoll.github.io/Portfolio/
 
 
 ## Installation
-Insert requirements here
+Insert requirements
 
 ## Usage
-Insert usage commands here
+Insert usage
 
 ## Results
 ![photo](./assets/images/mobile-1.JPG)
@@ -34,7 +34,7 @@ MIT License
 Copyright (c) 2021 Kate McColl
 
 ## Contribution
-Feel free to message if you would like to contribute
+Message here
 
 ## Questions 
 If you have any questions, please contact me by Email: kate@katemccollart.com GitHub: [katemccoll](https://github.com/katemccoll)
