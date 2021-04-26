@@ -1,7 +1,7 @@
 
 # Demo
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+undefined
     
 ## Description
 This is a demo
@@ -29,12 +29,12 @@ Insert usage
 
 
 ## License
-MIT License
+Apache-v2.0 License
 
 Copyright (c) 2021 Kate McColl
 
 ## Contribution
-Message here
+Message
 
 ## Questions 
 If you have any questions, please contact me by Email: kate@katemccollart.com GitHub: [katemccoll](https://github.com/katemccoll)
