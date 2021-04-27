@@ -1,7 +1,7 @@
 
 # Demo
 
-undefined
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
     
 ## Description
 This is a demo
@@ -19,10 +19,10 @@ https://katemccoll.github.io/Portfolio/
 
 
 ## Installation
-Insert requirements
+Insert Requirements
 
 ## Usage
-Insert usage
+Insert Usage
 
 ## Results
 ![photo](./assets/images/mobile-1.JPG)
