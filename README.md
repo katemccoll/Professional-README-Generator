@@ -1,10 +1,20 @@
 # Professional-README-Generator
-
-Live Link:
+Video link: https://drive.google.com/file/d/1egB8TYCL4XI-sMGnK0Tlsww7140WdNom/view
 
 ## Task
 
 Easily create a README file by using a command-line application to generate one
+
+
+## Table of Contents
+- [User Story](#user-story)
+- [Acceptance Criteria](#acceptance-criteria)  
+- [Installation](#installation)
+- [Usage](#usage)
+- [Results](#results)
+- [Contribution](#contribution)
+- [License](#license)
+- [Questions](#questions)
 
 ## User Story
 
@@ -34,6 +44,21 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
 
+## Installation
+npm install inquirer
+npm install util
 
-# Start
+## Usage
+node index.js
 
+## Results
+![photo](./assets/images/finished.JPG)
+
+
+## License
+MIT License
+
+Copyright (c) 2021 Kate McColl
+
+## Questions
+If you have any questions, please contact me by Email: kate@katemccollart.com GitHub: [katemccoll](https://github.com/katemccoll)
